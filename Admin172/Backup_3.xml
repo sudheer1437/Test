@@ -1,0 +1,1759 @@
+<?xml version="1.0" encoding="utf-16"?>
+<WorkflowTemplate xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Id>0</Id>
+  <Name>New Workflow</Name>
+  <Version>1.0.0.0</Version>
+  <WorkflowDefinition>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;Activity x:Class="Capella.Domain.Workflow.SystemArtifacts.Workflows.NewEditorWorkflow" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:ccn="clr-namespace:Capella.CapellaOne.Navigation;assembly=Capella.CapellaOne" xmlns:cdcp="clr-namespace:Capella.Domain.CRM.Patients;assembly=Capella.Domain.CRM" xmlns:cdcpb="clr-namespace:Capella.Domain.CRM.Patients.BusinessObjects;assembly=Capella.Domain.CRM" xmlns:cdw="clr-namespace:Capella.Domain.Workflow;assembly=Capella.Domain.Workflow" xmlns:cdwcc="clr-namespace:Capella.Domain.Workflow.CustomActivities.Communication;assembly=Capella.Domain.Workflow" xmlns:cdwcg="clr-namespace:Capella.Domain.Workflow.CustomActivities.General;assembly=Capella.Domain.Workflow" xmlns:cdwcp="clr-namespace:Capella.Domain.Workflow.CustomActivities.Patients;assembly=Capella.Domain.Workflow" xmlns:cwb="clr-namespace:Common.Workflow.BusinessObjects;assembly=Common.Workflow" xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:this="clr-namespace:Capella.Domain.Workflow.SystemArtifacts.Workflows" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"&gt;&lt;x:Members&gt;&lt;x:Property Name="InWorkflow" Type="InArgument(cwb:Workflow)" /&gt;&lt;x:Property Name="Tags" Type="InArgument(x:String)" /&gt;&lt;/x:Members&gt;&lt;this:NewEditorWorkflow.Tags&gt;&lt;InArgument x:TypeArguments="x:String"&gt;&lt;Literal x:TypeArguments="x:String" Value="" /&gt;&lt;/InArgument&gt;&lt;/this:NewEditorWorkflow.Tags&gt;&lt;sap2010:ExpressionActivityEditor.ExpressionActivityEditor&gt;C#&lt;/sap2010:ExpressionActivityEditor.ExpressionActivityEditor&gt;&lt;sap:VirtualizedContainerService.HintSize&gt;457.6,360&lt;/sap:VirtualizedContainerService.HintSize&gt;&lt;sap2010:WorkflowViewState.IdRef&gt;Capella.Domain.Workflow.SystemArtifacts.Workflows.NewEditorWorkflow_1&lt;/sap2010:WorkflowViewState.IdRef&gt;&lt;TextExpression.NamespacesForImplementation&gt;&lt;sco:Collection x:TypeArguments="x:String"&gt;&lt;x:String&gt;System&lt;/x:String&gt;&lt;x:String&gt;System.Collections.Generic&lt;/x:String&gt;&lt;x:String&gt;System.Data&lt;/x:String&gt;&lt;x:String&gt;System.Linq&lt;/x:String&gt;&lt;x:String&gt;System.Text&lt;/x:String&gt;&lt;x:String&gt;Common.Workflow.BusinessObjects&lt;/x:String&gt;&lt;x:String&gt;Capella.Domain.CRM.Patients&lt;/x:String&gt;&lt;x:String&gt;Capella.Domain.CRM.Patients.BusinessObjects&lt;/x:String&gt;&lt;x:String&gt;Common.Utilities&lt;/x:String&gt;&lt;x:String&gt;Common.BusinessObject&lt;/x:String&gt;&lt;x:String&gt;Capella.Domain.Workflow&lt;/x:String&gt;&lt;x:String&gt;Common.DocGen&lt;/x:String&gt;&lt;x:String&gt;Common.DocGen.Interfaces&lt;/x:String&gt;&lt;x:String&gt;Capella.CapellaOne.Navigation&lt;/x:String&gt;&lt;/sco:Collection&gt;&lt;/TextExpression.NamespacesForImplementation&gt;&lt;TextExpression.ReferencesForImplementation&gt;&lt;sco:Collection x:TypeArguments="AssemblyReference"&gt;&lt;AssemblyReference&gt;mscorlib&lt;/AssemblyReference&gt;&lt;AssemblyReference&gt;System&lt;/AssemblyReference&gt;&lt;AssemblyReference&gt;System.Core&lt;/AssemblyReference&gt;&lt;AssemblyReference&gt;System.Data&lt;/AssemblyReference&gt;&lt;AssemblyReference&gt;System.ServiceModel&lt;/AssemblyReference&gt;&lt;AssemblyReference&gt;System.Xml&lt;/AssemblyReference&gt;&lt;AssemblyReference&gt;Common.Workflow&lt;/AssemblyReference&gt;&lt;AssemblyReference&gt;Capella.Domain.CRM&lt;/AssemblyReference&gt;&lt;AssemblyReference&gt;Common.Utilities&lt;/AssemblyReference&gt;&lt;AssemblyReference&gt;Common.BusinessObject&lt;/AssemblyReference&gt;&lt;AssemblyReference&gt;Capella.Domain.Workflow&lt;/AssemblyReference&gt;&lt;AssemblyReference&gt;Common.DocGen&lt;/AssemblyReference&gt;&lt;AssemblyReference&gt;Capella.CapellaOne&lt;/AssemblyReference&gt;&lt;/sco:Collection&gt;&lt;/TextExpression.ReferencesForImplementation&gt;&lt;TryCatch sap:VirtualizedContainerService.HintSize="417.6,280" sap2010:WorkflowViewState.IdRef="TryCatch_4"&gt;&lt;sap:WorkflowViewStateService.ViewState&gt;&lt;scg:Dictionary x:TypeArguments="x:String, x:Object"&gt;&lt;x:Boolean x:Key="IsExpanded"&gt;False&lt;/x:Boolean&gt;&lt;x:Boolean x:Key="IsPinned"&gt;False&lt;/x:Boolean&gt;&lt;/scg:Dictionary&gt;&lt;/sap:WorkflowViewStateService.ViewState&gt;&lt;TryCatch.Try&gt;&lt;Flowchart sap:VirtualizedContainerService.HintSize="200,49.6" sap2010:WorkflowViewState.IdRef="Flowchart_3"&gt;&lt;Flowchart.Variables&gt;&lt;Variable x:TypeArguments="x:Int32" Default="0" Name="Index" /&gt;&lt;Variable x:TypeArguments="cdcp:PatientWorkflowHelper" Name="Helper" /&gt;&lt;Variable x:TypeArguments="ccn:Nav" Name="_Nav"&gt;&lt;Variable.Default&gt;&lt;mca:CSharpValue x:TypeArguments="ccn:Nav"&gt;new Nav();&lt;/mca:CSharpValue&gt;&lt;/Variable.Default&gt;&lt;/Variable&gt;&lt;Variable x:TypeArguments="cdw:WFHelper" Name="WFHelper" /&gt;&lt;Variable x:TypeArguments="cdcpb:ScoreCard" Name="NewScoreCard"&gt;&lt;Variable.Default&gt;&lt;mca:CSharpValue x:TypeArguments="cdcpb:ScoreCard"&gt;new ScoreCard();&lt;/mca:CSharpValue&gt;&lt;/Variable.Default&gt;&lt;/Variable&gt;&lt;/Flowchart.Variables&gt;&lt;sap:WorkflowViewStateService.ViewState&gt;&lt;scg:Dictionary x:TypeArguments="x:String, x:Object"&gt;&lt;x:Boolean x:Key="IsExpanded"&gt;False&lt;/x:Boolean&gt;&lt;av:Point x:Key="ShapeLocation"&gt;270,2.5&lt;/av:Point&gt;&lt;av:Size x:Key="ShapeSize"&gt;60,75.2&lt;/av:Size&gt;&lt;av:PointCollection x:Key="ConnectorLocation"&gt;300,77.7 300,107.7 380,107.7 380,140&lt;/av:PointCollection&gt;&lt;/scg:Dictionary&gt;&lt;/sap:WorkflowViewStateService.ViewState&gt;&lt;Flowchart.StartNode&gt;&lt;x:Reference&gt;__ReferenceID0&lt;/x:Reference&gt;&lt;/Flowchart.StartNode&gt;&lt;FlowStep x:Name="__ReferenceID0" sap2010:WorkflowViewState.IdRef="FlowStep_5"&gt;&lt;sap:WorkflowViewStateService.ViewState&gt;&lt;scg:Dictionary x:TypeArguments="x:String, x:Object"&gt;&lt;av:Point x:Key="ShapeLocation"&gt;280,140&lt;/av:Point&gt;&lt;av:Size x:Key="ShapeSize"&gt;200,22.4&lt;/av:Size&gt;&lt;/scg:Dictionary&gt;&lt;/sap:WorkflowViewStateService.ViewState&gt;&lt;cdwcp:ExtractPatientFromWorkflow sap:VirtualizedContainerService.HintSize="200,22.4" sap2010:WorkflowViewState.IdRef="ExtractPatientFromWorkflow_3"&gt;&lt;cdwcp:ExtractPatientFromWorkflow.Result&gt;&lt;OutArgument x:TypeArguments="cdcp:PatientWorkflowHelper"&gt;&lt;mca:CSharpReference x:TypeArguments="cdcp:PatientWorkflowHelper"&gt;Helper&lt;/mca:CSharpReference&gt;&lt;/OutArgument&gt;&lt;/cdwcp:ExtractPatientFromWorkflow.Result&gt;&lt;sap:WorkflowViewStateService.ViewState&gt;&lt;scg:Dictionary x:TypeArguments="x:String, x:Object"&gt;&lt;x:Boolean x:Key="IsExpanded"&gt;True&lt;/x:Boolean&gt;&lt;/scg:Dictionary&gt;&lt;/sap:WorkflowViewStateService.ViewState&gt;&lt;cdwcp:ExtractPatientFromWorkflow.WorkflowArg&gt;&lt;InArgument x:TypeArguments="cwb:Workflow"&gt;&lt;mca:CSharpValue x:TypeArguments="cwb:Workflow"&gt;InWorkflow&lt;/mca:CSharpValue&gt;&lt;/InArgument&gt;&lt;/cdwcp:ExtractPatientFromWorkflow.WorkflowArg&gt;&lt;/cdwcp:ExtractPatientFromWorkflow&gt;&lt;/FlowStep&gt;&lt;/Flowchart&gt;&lt;/TryCatch.Try&gt;&lt;TryCatch.Catches&gt;&lt;Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="403.2,20" sap2010:WorkflowViewState.IdRef="Catch`1_4"&gt;&lt;sap:WorkflowViewStateService.ViewState&gt;&lt;scg:Dictionary x:TypeArguments="x:String, x:Object"&gt;&lt;x:Boolean x:Key="IsExpanded"&gt;False&lt;/x:Boolean&gt;&lt;x:Boolean x:Key="IsPinned"&gt;False&lt;/x:Boolean&gt;&lt;/scg:Dictionary&gt;&lt;/sap:WorkflowViewStateService.ViewState&gt;&lt;ActivityAction x:TypeArguments="s:Exception"&gt;&lt;ActivityAction.Argument&gt;&lt;DelegateInArgument x:TypeArguments="s:Exception" Name="exception" /&gt;&lt;/ActivityAction.Argument&gt;&lt;Sequence sap:VirtualizedContainerService.HintSize="222.4,209.6" sap2010:WorkflowViewState.IdRef="Sequence_6"&gt;&lt;sap:WorkflowViewStateService.ViewState&gt;&lt;scg:Dictionary x:TypeArguments="x:String, x:Object"&gt;&lt;x:Boolean x:Key="IsExpanded"&gt;True&lt;/x:Boolean&gt;&lt;/scg:Dictionary&gt;&lt;/sap:WorkflowViewStateService.ViewState&gt;&lt;cdwcg:Log sap:VirtualizedContainerService.HintSize="200,22.4" sap2010:WorkflowViewState.IdRef="Log_4"&gt;&lt;cdwcg:Log.LogEntry&gt;&lt;InArgument x:TypeArguments="x:String"&gt;&lt;mca:CSharpValue x:TypeArguments="x:String"&gt;Common.Utilities.ErrorException.GetExceptionError(exception)&lt;/mca:CSharpValue&gt;&lt;/InArgument&gt;&lt;/cdwcg:Log.LogEntry&gt;&lt;cdwcg:Log.WorkflowArg&gt;&lt;InArgument x:TypeArguments="cwb:Workflow"&gt;&lt;mca:CSharpValue x:TypeArguments="cwb:Workflow"&gt;InWorkflow&lt;/mca:CSharpValue&gt;&lt;/InArgument&gt;&lt;/cdwcg:Log.WorkflowArg&gt;&lt;/cdwcg:Log&gt;&lt;cdwcc:SendChatMessage From="SYSTEM, Workflow Service" sap:VirtualizedContainerService.HintSize="200,22.4" sap2010:WorkflowViewState.IdRef="SendChatMessage_4"&gt;&lt;cdwcc:SendChatMessage.Message&gt;&lt;InArgument x:TypeArguments="x:String"&gt;&lt;mca:CSharpValue x:TypeArguments="x:String"&gt;Common.Utilities.ErrorException.GetExceptionError(exception)&lt;/mca:CSharpValue&gt;&lt;/InArgument&gt;&lt;/cdwcc:SendChatMessage.Message&gt;&lt;cdwcc:SendChatMessage.To&gt;&lt;InArgument x:TypeArguments="x:String"&gt;&lt;mca:CSharpValue x:TypeArguments="x:String"&gt;WFHelper.ErrorsChatRoom&lt;/mca:CSharpValue&gt;&lt;/InArgument&gt;&lt;/cdwcc:SendChatMessage.To&gt;&lt;/cdwcc:SendChatMessage&gt;&lt;/Sequence&gt;&lt;/ActivityAction&gt;&lt;/Catch&gt;&lt;/TryCatch.Catches&gt;&lt;/TryCatch&gt;&lt;/Activity&gt;</WorkflowDefinition>
+  <DateCreated xsi:nil="true" />
+  <DateUpdated xsi:nil="true" />
+  <WorkflowArgumentDescriptions />
+  <Workflows />
+  <DescriptionType_>PATIENT_TYPE</DescriptionType_>
+  <IsEditable>true</IsEditable>
+</WorkflowTemplate><?xml version="1.0" encoding="utf-16"?>
+<ArrayOfSurveyTemplate xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SurveyTemplate>
+    <IsEditable>false</IsEditable>
+    <Id>2642</Id>
+    <Key>T17</Key>
+    <Name>ADL Screening</Name>
+    <Version>1.0.6745.31235</Version>
+    <CreatedDate>2018-06-20T17:22:30</CreatedDate>
+    <CreatedBy>SYSTEM</CreatedBy>
+    <PostponeSurveyAction>NO_ACTION</PostponeSurveyAction>
+    <TakenSurveyAction>ADL_ADLScreen_scrd,MESSAGE_ONLY_General_Annual_HRA_Task,MESSAGE_ONLY_General_Initial_HRA_Task,PatientAssessment_IPEFullAssessmentDue_Task</TakenSurveyAction>
+    <IsScorable>true</IsScorable>
+    <BusinessVersion>1.0.6745.25506</BusinessVersion>
+    <MessageOnlyActions>false</MessageOnlyActions>
+    <ScorecardType>ADLSURVEY</ScorecardType>
+    <QuestionGroups>
+      <QuestionGroup>
+        <Order>0</Order>
+        <Visible>false</Visible>
+        <Name>Loading...</Name>
+        <GroupQuestions />
+      </QuestionGroup>
+    </QuestionGroups>
+    <Headers />
+    <SurveyScoringLevels />
+    <Tags />
+  </SurveyTemplate>
+  <SurveyTemplate>
+    <IsEditable>false</IsEditable>
+    <Id>2643</Id>
+    <Key>T23</Key>
+    <Name>Advance Care Planning</Name>
+    <Version>1.0.6745.31235</Version>
+    <CreatedDate>2018-06-20T17:22:30</CreatedDate>
+    <CreatedBy>SYSTEM</CreatedBy>
+    <PostponeSurveyAction>NO_ACTION</PostponeSurveyAction>
+    <TakenSurveyAction>ACP_ACPStatus_scrd_v1,ACP_ACPDiscussion_scrd_v1,PatientAssessment_IPEFullAssessmentDue_Task</TakenSurveyAction>
+    <IsScorable>false</IsScorable>
+    <BusinessVersion>1.0.0.0</BusinessVersion>
+    <MessageOnlyActions>false</MessageOnlyActions>
+    <ScorecardType>ADVANCECAREPLAN,ADVANCECAREPLANSTATUS</ScorecardType>
+    <QuestionGroups>
+      <QuestionGroup>
+        <Order>0</Order>
+        <Visible>false</Visible>
+        <Name>Loading...</Name>
+        <GroupQuestions />
+      </QuestionGroup>
+    </QuestionGroups>
+    <Headers />
+    <SurveyScoringLevels />
+    <Tags />
+  </SurveyTemplate>
+  <SurveyTemplate>
+    <IsEditable>false</IsEditable>
+    <Id>2644</Id>
+    <Key>T35</Key>
+    <Name>BDI Depression Screening - ESCO</Name>
+    <Version>1.0.6745.31235</Version>
+    <CreatedDate>2018-06-20T17:22:30</CreatedDate>
+    <CreatedBy>SYSTEM</CreatedBy>
+    <PostponeSurveyAction>NO_ACTION</PostponeSurveyAction>
+    <TakenSurveyAction>DepressionScreeningResultESCO_Scrd,Depression_ESCO_CarePlan_Task</TakenSurveyAction>
+    <IsScorable>true</IsScorable>
+    <BusinessVersion>1.0.0.0</BusinessVersion>
+    <MessageOnlyActions>false</MessageOnlyActions>
+    <QuestionGroups>
+      <QuestionGroup>
+        <Order>0</Order>
+        <Visible>false</Visible>
+        <Name>Loading...</Name>
+        <GroupQuestions />
+      </QuestionGroup>
+    </QuestionGroups>
+    <Headers />
+    <SurveyScoringLevels />
+    <Tags />
+  </SurveyTemplate>
+  <SurveyTemplate>
+    <IsEditable>false</IsEditable>
+    <Id>2645</Id>
+    <Key>T36</Key>
+    <Name>BHS Initial Evaluation</Name>
+    <Version>1.0.6745.31235</Version>
+    <CreatedDate>2018-06-20T17:22:30</CreatedDate>
+    <CreatedBy>SYSTEM</CreatedBy>
+    <PostponeSurveyAction>NO_ACTION</PostponeSurveyAction>
+    <TakenSurveyAction>NO_ACTION</TakenSurveyAction>
+    <IsScorable>false</IsScorable>
+    <BusinessVersion>1.0.0.0</BusinessVersion>
+    <MessageOnlyActions>false</MessageOnlyActions>
+    <QuestionGroups>
+      <QuestionGroup>
+        <Order>0</Order>
+        <Visible>false</Visible>
+        <Name>Loading...</Name>
+        <GroupQuestions />
+      </QuestionGroup>
+    </QuestionGroups>
+    <Headers />
+    <SurveyScoringLevels />
+    <Tags />
+  </SurveyTemplate>
+  <SurveyTemplate>
+    <IsEditable>false</IsEditable>
+    <Id>2646</Id>
+    <Key>T37</Key>
+    <Name>BHS Progress Note</Name>
+    <Version>1.0.6745.31235</Version>
+    <CreatedDate>2018-06-20T17:22:30</CreatedDate>
+    <CreatedBy>SYSTEM</CreatedBy>
+    <PostponeSurveyAction>NO_ACTION</PostponeSurveyAction>
+    <TakenSurveyAction>NO_ACTION</TakenSurveyAction>
+    <IsScorable>false</IsScorable>
+    <BusinessVersion>1.0.0.0</BusinessVersion>
+    <MessageOnlyActions>false</MessageOnlyActions>
+    <QuestionGroups>
+      <QuestionGroup>
+        <Order>0</Order>
+        <Visible>false</Visible>
+        <Name>Loading...</Name>
+        <GroupQuestions />
+      </QuestionGroup>
+    </QuestionGroups>
+    <Headers />
+    <SurveyScoringLevels />
+    <Tags />
+  </SurveyTemplate>
+  <SurveyTemplate>
+    <IsEditable>false</IsEditable>
+    <Id>2647</Id>
+    <Key>T44</Key>
+    <Name>BHS Termination of Care Summary</Name>
+    <Version>1.0.6745.31235</Version>
+    <CreatedDate>2018-06-20T17:22:30</CreatedDate>
+    <CreatedBy>SYSTEM</CreatedBy>
+    <PostponeSurveyAction>NO_ACTION</PostponeSurveyAction>
+    <TakenSurveyAction>NO_ACTION</TakenSurveyAction>
+    <IsScorable>false</IsScorable>
+    <BusinessVersion>1.0.0.0</BusinessVersion>
+    <MessageOnlyActions>false</MessageOnlyActions>
+    <QuestionGroups>
+      <QuestionGroup>
+        <Order>0</Order>
+        <Visible>false</Visible>
+        <Name>Loading...</Name>
+        <GroupQuestions />
+      </QuestionGroup>
+    </QuestionGroups>
+    <Headers />
+    <SurveyScoringLevels />
+    <Tags />
+  </SurveyTemplate>
+  <SurveyTemplate>
+    <IsEditable>false</IsEditable>
+    <Id>2648</Id>
+    <Key>T32</Key>
+    <Name>CHF Fluid HTN Pathway</Name>
+    <Version>1.0.6745.31235</Version>
+    <CreatedDate>2018-06-20T17:22:30</CreatedDate>
+    <CreatedBy>SYSTEM</CreatedBy>
+    <PostponeSurveyAction>NO_ACTION</PostponeSurveyAction>
+    <TakenSurveyAction>NO_ACTION</TakenSurveyAction>
+    <IsScorable>false</IsScorable>
+    <BusinessVersion>1.0.0.0</BusinessVersion>
+    <MessageOnlyActions>false</MessageOnlyActions>
+    <QuestionGroups>
+      <QuestionGroup>
+        <Order>0</Order>
+        <Visible>false</Visible>
+        <Name>Loading...</Name>
+        <GroupQuestions />
+      </QuestionGroup>
+    </QuestionGroups>
+    <Headers />
+    <SurveyScoringLevels />
+    <Tags />
+  </SurveyTemplate>
+  <SurveyTemplate>
+    <IsEditable>false</IsEditable>
+    <Id>2649</Id>
+    <Key>T19</Key>
+    <Name>Caregiver Assessment</Name>
+    <Description>A caregiver is defined as one who contributes the benefits of medical, social, economic, or environmental resources to a dependent or partially dependent individual.</Description>
+    <Version>1.0.6745.31235</Version>
+    <CreatedDate>2018-06-20T17:22:30</CreatedDate>
+    <CreatedBy>SYSTEM</CreatedBy>
+    <PostponeSurveyAction>NO_ACTION</PostponeSurveyAction>
+    <TakenSurveyAction>NO_ACTION</TakenSurveyAction>
+    <IsScorable>false</IsScorable>
+    <BusinessVersion>1.0.0.0</BusinessVersion>
+    <MessageOnlyActions>false</MessageOnlyActions>
+    <QuestionGroups>
+      <QuestionGroup>
+        <Order>0</Order>
+        <Visible>false</Visible>
+        <Name>Loading...</Name>
+        <GroupQuestions />
+      </QuestionGroup>
+    </QuestionGroups>
+    <Headers />
+    <SurveyScoringLevels />
+    <Tags />
+  </SurveyTemplate>
+  <SurveyTemplate>
+    <IsEditable>false</IsEditable>
+    <Id>2650</Id>
+    <Key>T45</Key>
+    <Name>Cognitive Screening - Non-SNP</Name>
+    <Version>1.0.6745.31235</Version>
+    <CreatedDate>2018-06-20T17:22:30</CreatedDate>
+    <CreatedBy>SYSTEM</CreatedBy>
+    <PostponeSurveyAction>NO_ACTION</PostponeSurveyAction>
+    <TakenSurveyAction>NO_ACTION</TakenSurveyAction>
+    <IsScorable>true</IsScorable>
+    <BusinessVersion>1.0.0.0</BusinessVersion>
+    <MessageOnlyActions>false</MessageOnlyActions>
+    <QuestionGroups>
+      <QuestionGroup>
+        <Order>0</Order>
+        <Visible>false</Visible>
+        <Name>Loading...</Name>
+        <GroupQuestions />
+      </QuestionGroup>
+    </QuestionGroups>
+    <Headers />
+    <SurveyScoringLevels />
+    <Tags />
+  </SurveyTemplate>
+  <SurveyTemplate>
+    <IsEditable>false</IsEditable>
+    <Id>2651</Id>
+    <Key>T13</Key>
+    <Name>Cognitive Screening - SNP</Name>
+    <Version>1.0.6745.31235</Version>
+    <CreatedDate>2018-06-20T17:22:30</CreatedDate>
+    <CreatedBy>SYSTEM</CreatedBy>
+    <PostponeSurveyAction>NO_ACTION</PostponeSurveyAction>
+    <TakenSurveyAction>Cognitive_CognitiveScreening_scrd,MESSAGE_ONLY_General_Annual_HRA_Task,MESSAGE_ONLY_General_Initial_HRA_Task</TakenSurveyAction>
+    <IsScorable>true</IsScorable>
+    <BusinessVersion>1.0.0.0</BusinessVersion>
+    <MessageOnlyActions>false</MessageOnlyActions>
+    <ScorecardType>COGNITIVESCREENING</ScorecardType>
+    <QuestionGroups>
+      <QuestionGroup>
+        <Order>0</Order>
+        <Visible>false</Visible>
+        <Name>Loading...</Name>
+        <GroupQuestions />
+      </QuestionGroup>
+    </QuestionGroups>
+    <Headers />
+    <SurveyScoringLevels />
+    <Tags />
+  </SurveyTemplate>
+  <SurveyTemplate>
+    <IsEditable>false</IsEditable>
+    <Id>2652</Id>
+    <Key>T47</Key>
+    <Name>Commercial CC Routine Contact Survey</Name>
+    <Version>1.0.6745.31235</Version>
+    <CreatedDate>2018-06-20T17:22:30</CreatedDate>
+    <CreatedBy>SYSTEM</CreatedBy>
+    <PostponeSurveyAction>NO_ACTION</PostponeSurveyAction>
+    <TakenSurveyAction>NO_ACTION</TakenSurveyAction>
+    <IsScorable>false</IsScorable>
+    <BusinessVersion>1.0.6730.24684</BusinessVersion>
+    <MessageOnlyActions>false</MessageOnlyActions>
+    <QuestionGroups>
+      <QuestionGroup>
+        <Order>0</Order>
+        <Visible>false</Visible>
+        <Name>Loading...</Name>
+        <GroupQuestions />
+      </QuestionGroup>
+    </QuestionGroups>
+    <Headers />
+    <SurveyScoringLevels />
+    <Tags />
+  </SurveyTemplate>
+  <SurveyTemplate>
+    <IsEditable>false</IsEditable>
+    <Id>2653</Id>
+    <Key>T15</Key>
+    <Name>Comorbid Review</Name>
+    <Version>1.0.6745.31235</Version>
+    <CreatedDate>2018-06-20T17:22:30</CreatedDate>
+    <CreatedBy>SYSTEM</CreatedBy>
+    <PostponeSurveyAction>NO_ACTION</PostponeSurveyAction>
+    <TakenSurveyAction>MESSAGE_ONLY_General_Annual_HRA_Task,MESSAGE_ONLY_General_Initial_HRA_Task</TakenSurveyAction>
+    <IsScorable>false</IsScorable>
+    <BusinessVersion>1.0.0.0</BusinessVersion>
+    <MessageOnlyActions>false</MessageOnlyActions>
+    <QuestionGroups>
+      <QuestionGroup>
+        <Order>0</Order>
+        <Visible>false</Visible>
+        <Name>Loading...</Name>
+        <GroupQuestions />
+      </QuestionGroup>
+    </QuestionGroups>
+    <Headers />
+    <SurveyScoringLevels />
+    <Tags />
+  </SurveyTemplate>
+  <SurveyTemplate>
+    <IsEditable>false</IsEditable>
+    <Id>2654</Id>
+    <Key>T25</Key>
+    <Name>Diabetic Blood Sugar Pathway</Name>
+    <Version>1.0.6745.31235</Version>
+    <CreatedDate>2018-06-20T17:22:30</CreatedDate>
+    <CreatedBy>SYSTEM</CreatedBy>
+    <PostponeSurveyAction>NO_ACTION</PostponeSurveyAction>
+    <TakenSurveyAction>NO_ACTION</TakenSurveyAction>
+    <IsScorable>false</IsScorable>
+    <BusinessVersion>1.0.0.0</BusinessVersion>
+    <MessageOnlyActions>false</MessageOnlyActions>
+    <QuestionGroups>
+      <QuestionGroup>
+        <Order>0</Order>
+        <Visible>false</Visible>
+        <Name>Loading...</Name>
+        <GroupQuestions />
+      </QuestionGroup>
+    </QuestionGroups>
+    <Headers />
+    <SurveyScoringLevels />
+    <Tags />
+  </SurveyTemplate>
+  <SurveyTemplate>
+    <IsEditable>false</IsEditable>
+    <Id>2655</Id>
+    <Key>T27</Key>
+    <Name>Diabetic Foot Pathway</Name>
+    <Version>1.0.6745.31235</Version>
+    <CreatedDate>2018-06-20T17:22:30</CreatedDate>
+    <CreatedBy>SYSTEM</CreatedBy>
+    <PostponeSurveyAction>NO_ACTION</PostponeSurveyAction>
+    <TakenSurveyAction>Diabetic_VHNOpenWound_SCRD,PVD_PVDFootCheck_scrd_v1,Diabetes_OpenWound_Scrd,Diabetic_VHNFootExam_SCRD,PatientAssessment_IPEFullAssessmentDue_Task</TakenSurveyAction>
+    <IsScorable>false</IsScorable>
+    <BusinessVersion>1.0.0.0</BusinessVersion>
+    <MessageOnlyActions>false</MessageOnlyActions>
+    <ScorecardType>VHNFOOTCHECK</ScorecardType>
+    <QuestionGroups>
+      <QuestionGroup>
+        <Order>0</Order>
+        <Visible>false</Visible>
+        <Name>Loading...</Name>
+        <GroupQuestions />
+      </QuestionGroup>
+    </QuestionGroups>
+    <Headers />
+    <SurveyScoringLevels />
+    <Tags />
+  </SurveyTemplate>
+  <SurveyTemplate>
+    <IsEditable>false</IsEditable>
+    <Id>2656</Id>
+    <Key>T30</Key>
+    <Name>Distress Thermometer</Name>
+    <Version>1.0.6745.31235</Version>
+    <CreatedDate>2018-06-20T17:22:30</CreatedDate>
+    <CreatedBy>SYSTEM</CreatedBy>
+    <PostponeSurveyAction>NO_ACTION</PostponeSurveyAction>
+    <TakenSurveyAction>NO_ACTION</TakenSurveyAction>
+    <IsScorable>false</IsScorable>
+    <BusinessVersion>1.0.0.0</BusinessVersion>
+    <MessageOnlyActions>false</MessageOnlyActions>
+    <QuestionGroups>
+      <QuestionGroup>
+        <Order>0</Order>
+        <Visible>false</Visible>
+        <Name>Loading...</Name>
+        <GroupQuestions />
+      </QuestionGroup>
+    </QuestionGroups>
+    <Headers />
+    <SurveyScoringLevels />
+    <Tags />
+  </SurveyTemplate>
+  <SurveyTemplate>
+    <IsEditable>false</IsEditable>
+    <Id>2657</Id>
+    <Key>T29</Key>
+    <Name>ESRD Treatment Options Pathway</Name>
+    <Version>1.0.6745.31235</Version>
+    <CreatedDate>2018-06-20T17:22:30</CreatedDate>
+    <CreatedBy>SYSTEM</CreatedBy>
+    <PostponeSurveyAction>NO_ACTION</PostponeSurveyAction>
+    <TakenSurveyAction>TXOPTIONS_TXOptionsDiscussed_scrd_v1</TakenSurveyAction>
+    <IsScorable>false</IsScorable>
+    <BusinessVersion>1.0.0.0</BusinessVersion>
+    <MessageOnlyActions>false</MessageOnlyActions>
+    <ScorecardType>TXOPTIONS</ScorecardType>
+    <QuestionGroups>
+      <QuestionGroup>
+        <Order>0</Order>
+        <Visible>false</Visible>
+        <Name>Loading...</Name>
+        <GroupQuestions />
+      </QuestionGroup>
+    </QuestionGroups>
+    <Headers />
+    <SurveyScoringLevels />
+    <Tags />
+  </SurveyTemplate>
+  <SurveyTemplate>
+    <IsEditable>false</IsEditable>
+    <Id>2658</Id>
+    <Key>T16</Key>
+    <Name>Fall Risk Assessment</Name>
+    <Version>1.0.6745.31235</Version>
+    <CreatedDate>2018-06-20T17:22:30</CreatedDate>
+    <CreatedBy>SYSTEM</CreatedBy>
+    <PostponeSurveyAction>NO_ACTION</PostponeSurveyAction>
+    <TakenSurveyAction>PatientAssessment_IPEFullAssessmentDue_Task</TakenSurveyAction>
+    <IsScorable>true</IsScorable>
+    <BusinessVersion>1.0.0.0</BusinessVersion>
+    <MessageOnlyActions>false</MessageOnlyActions>
+    <QuestionGroups>
+      <QuestionGroup>
+        <Order>0</Order>
+        <Visible>false</Visible>
+        <Name>Loading...</Name>
+        <GroupQuestions />
+      </QuestionGroup>
+    </QuestionGroups>
+    <Headers />
+    <SurveyScoringLevels />
+    <Tags />
+  </SurveyTemplate>
+  <SurveyTemplate>
+    <IsEditable>false</IsEditable>
+    <Id>2659</Id>
+    <Key>T20</Key>
+    <Name>Fall Risk Assessment - ESCO</Name>
+    <Version>1.0.6745.31235</Version>
+    <CreatedDate>2018-06-20T17:22:30</CreatedDate>
+    <CreatedBy>SYSTEM</CreatedBy>
+    <PostponeSurveyAction>NO_ACTION</PostponeSurveyAction>
+    <TakenSurveyAction>Annual_ESCO_FallRisk_Task,PatientAssessment_IPEFullAssessmentDue_Task</TakenSurveyAction>
+    <IsScorable>false</IsScorable>
+    <BusinessVersion>1.0.0.0</BusinessVersion>
+    <MessageOnlyActions>false</MessageOnlyActions>
+    <QuestionGroups>
+      <QuestionGroup>
+        <Order>0</Order>
+        <Visible>false</Visible>
+        <Name>Loading...</Name>
+        <GroupQuestions />
+      </QuestionGroup>
+    </QuestionGroups>
+    <Headers />
+    <SurveyScoringLevels />
+    <Tags />
+  </SurveyTemplate>
+  <SurveyTemplate>
+    <IsEditable>false</IsEditable>
+    <Id>2660</Id>
+    <Key>T10</Key>
+    <Name>Foot Exam - Monofilament</Name>
+    <Version>1.0.6745.31235</Version>
+    <CreatedDate>2018-06-20T17:22:30</CreatedDate>
+    <CreatedBy>SYSTEM</CreatedBy>
+    <PostponeSurveyAction>NO_ACTION</PostponeSurveyAction>
+    <TakenSurveyAction>PVD_PVDFootCheck_scrd_v1</TakenSurveyAction>
+    <IsScorable>false</IsScorable>
+    <BusinessVersion>1.0.0.0</BusinessVersion>
+    <MessageOnlyActions>false</MessageOnlyActions>
+    <QuestionGroups>
+      <QuestionGroup>
+        <Order>0</Order>
+        <Visible>false</Visible>
+        <Name>Loading...</Name>
+        <GroupQuestions />
+      </QuestionGroup>
+    </QuestionGroups>
+    <Headers />
+    <SurveyScoringLevels />
+    <Tags />
+  </SurveyTemplate>
+  <SurveyTemplate>
+    <IsEditable>false</IsEditable>
+    <Id>2661</Id>
+    <Key>T14</Key>
+    <Name>Home Safety Screening</Name>
+    <Version>1.0.6745.31235</Version>
+    <CreatedDate>2018-06-20T17:22:30</CreatedDate>
+    <CreatedBy>SYSTEM</CreatedBy>
+    <PostponeSurveyAction>NO_ACTION</PostponeSurveyAction>
+    <TakenSurveyAction>HomeSafety_HomeSafetyScreen_scrd,PatientAssessment_IPEFullAssessmentDue_Task</TakenSurveyAction>
+    <IsScorable>true</IsScorable>
+    <BusinessVersion>1.0.0.0</BusinessVersion>
+    <MessageOnlyActions>false</MessageOnlyActions>
+    <ScorecardType>HOMESAFETYSCREENING</ScorecardType>
+    <QuestionGroups>
+      <QuestionGroup>
+        <Order>0</Order>
+        <Visible>false</Visible>
+        <Name>Loading...</Name>
+        <GroupQuestions />
+      </QuestionGroup>
+    </QuestionGroups>
+    <Headers />
+    <SurveyScoringLevels />
+    <Tags />
+  </SurveyTemplate>
+  <SurveyTemplate>
+    <IsEditable>false</IsEditable>
+    <Id>2662</Id>
+    <Key>T33</Key>
+    <Name>Infection Pathway</Name>
+    <Version>1.0.6745.31235</Version>
+    <CreatedDate>2018-06-20T17:22:30</CreatedDate>
+    <CreatedBy>SYSTEM</CreatedBy>
+    <PostponeSurveyAction>NO_ACTION</PostponeSurveyAction>
+    <TakenSurveyAction>NO_ACTION</TakenSurveyAction>
+    <IsScorable>false</IsScorable>
+    <BusinessVersion>1.0.6744.16784</BusinessVersion>
+    <MessageOnlyActions>false</MessageOnlyActions>
+    <QuestionGroups>
+      <QuestionGroup>
+        <Order>0</Order>
+        <Visible>false</Visible>
+        <Name>Loading...</Name>
+        <GroupQuestions />
+      </QuestionGroup>
+    </QuestionGroups>
+    <Headers />
+    <SurveyScoringLevels />
+    <Tags />
+  </SurveyTemplate>
+  <SurveyTemplate>
+    <IsEditable>false</IsEditable>
+    <Id>2663</Id>
+    <Key>T21</Key>
+    <Name>Medication Review</Name>
+    <Description>v3</Description>
+    <Version>1.0.6745.31235</Version>
+    <CreatedDate>2018-06-20T17:22:30</CreatedDate>
+    <CreatedBy>SYSTEM</CreatedBy>
+    <PostponeSurveyAction>NO_ACTION</PostponeSurveyAction>
+    <TakenSurveyAction>Medication_MedReview_Scrd,Medication_Medication_Review_Due_Task,MESSAGE_ONLY_Medication_PolyPharm_Task,Hospital_MedReview_Task</TakenSurveyAction>
+    <IsScorable>false</IsScorable>
+    <BusinessVersion>1.0.0.0</BusinessVersion>
+    <MessageOnlyActions>false</MessageOnlyActions>
+    <QuestionGroups>
+      <QuestionGroup>
+        <Order>0</Order>
+        <Visible>false</Visible>
+        <Name>Loading...</Name>
+        <GroupQuestions />
+      </QuestionGroup>
+    </QuestionGroups>
+    <Headers />
+    <SurveyScoringLevels />
+    <Tags />
+  </SurveyTemplate>
+  <SurveyTemplate>
+    <IsEditable>false</IsEditable>
+    <Id>2664</Id>
+    <Key>T8</Key>
+    <Name>NP ESRD Comprehensive Note</Name>
+    <Version>1.0.6745.31235</Version>
+    <CreatedDate>2018-06-20T17:22:30</CreatedDate>
+    <CreatedBy>SYSTEM</CreatedBy>
+    <PostponeSurveyAction>NO_ACTION</PostponeSurveyAction>
+    <TakenSurveyAction>NO_ACTION</TakenSurveyAction>
+    <IsScorable>false</IsScorable>
+    <BusinessVersion>1.0.0.0</BusinessVersion>
+    <MessageOnlyActions>false</MessageOnlyActions>
+    <QuestionGroups>
+      <QuestionGroup>
+        <Order>0</Order>
+        <Visible>false</Visible>
+        <Name>Loading...</Name>
+        <GroupQuestions />
+      </QuestionGroup>
+    </QuestionGroups>
+    <Headers />
+    <SurveyScoringLevels />
+    <Tags />
+  </SurveyTemplate>
+  <SurveyTemplate>
+    <IsEditable>false</IsEditable>
+    <Id>2665</Id>
+    <Key>T5</Key>
+    <Name>NP ESRD Post Discharge Note</Name>
+    <Version>1.0.6745.31235</Version>
+    <CreatedDate>2018-06-20T17:22:30</CreatedDate>
+    <CreatedBy>SYSTEM</CreatedBy>
+    <PostponeSurveyAction>NO_ACTION</PostponeSurveyAction>
+    <TakenSurveyAction>NO_ACTION</TakenSurveyAction>
+    <IsScorable>false</IsScorable>
+    <BusinessVersion>1.0.0.0</BusinessVersion>
+    <MessageOnlyActions>false</MessageOnlyActions>
+    <QuestionGroups>
+      <QuestionGroup>
+        <Order>0</Order>
+        <Visible>false</Visible>
+        <Name>Loading...</Name>
+        <GroupQuestions />
+      </QuestionGroup>
+    </QuestionGroups>
+    <Headers />
+    <SurveyScoringLevels />
+    <Tags />
+  </SurveyTemplate>
+  <SurveyTemplate>
+    <IsEditable>false</IsEditable>
+    <Id>2666</Id>
+    <Key>T7</Key>
+    <Name>NP ESRD Progress Note</Name>
+    <Version>1.0.6745.31235</Version>
+    <CreatedDate>2018-06-20T17:22:30</CreatedDate>
+    <CreatedBy>SYSTEM</CreatedBy>
+    <PostponeSurveyAction>NO_ACTION</PostponeSurveyAction>
+    <TakenSurveyAction>NO_ACTION</TakenSurveyAction>
+    <IsScorable>false</IsScorable>
+    <BusinessVersion>1.0.0.0</BusinessVersion>
+    <MessageOnlyActions>false</MessageOnlyActions>
+    <QuestionGroups>
+      <QuestionGroup>
+        <Order>0</Order>
+        <Visible>false</Visible>
+        <Name>Loading...</Name>
+        <GroupQuestions />
+      </QuestionGroup>
+    </QuestionGroups>
+    <Headers />
+    <SurveyScoringLevels />
+    <Tags />
+  </SurveyTemplate>
+  <SurveyTemplate>
+    <IsEditable>false</IsEditable>
+    <Id>2667</Id>
+    <Key>T11</Key>
+    <Name>NP ESRD Visit Note Amendment</Name>
+    <Version>1.0.6745.31235</Version>
+    <CreatedDate>2018-06-20T17:22:30</CreatedDate>
+    <CreatedBy>SYSTEM</CreatedBy>
+    <PostponeSurveyAction>NO_ACTION</PostponeSurveyAction>
+    <TakenSurveyAction>NO_ACTION</TakenSurveyAction>
+    <IsScorable>false</IsScorable>
+    <BusinessVersion>1.0.0.0</BusinessVersion>
+    <MessageOnlyActions>false</MessageOnlyActions>
+    <QuestionGroups>
+      <QuestionGroup>
+        <Order>0</Order>
+        <Visible>false</Visible>
+        <Name>Loading...</Name>
+        <GroupQuestions />
+      </QuestionGroup>
+    </QuestionGroups>
+    <Headers />
+    <SurveyScoringLevels />
+    <Tags />
+  </SurveyTemplate>
+  <SurveyTemplate>
+    <IsEditable>false</IsEditable>
+    <Id>2668</Id>
+    <Key>T24</Key>
+    <Name>Nutrition Pathway</Name>
+    <Version>1.0.6745.31235</Version>
+    <CreatedDate>2018-06-20T17:22:30</CreatedDate>
+    <CreatedBy>SYSTEM</CreatedBy>
+    <PostponeSurveyAction>NO_ACTION</PostponeSurveyAction>
+    <TakenSurveyAction>NO_ACTION</TakenSurveyAction>
+    <IsScorable>false</IsScorable>
+    <BusinessVersion>1.0.6730.25697</BusinessVersion>
+    <MessageOnlyActions>false</MessageOnlyActions>
+    <QuestionGroups>
+      <QuestionGroup>
+        <Order>0</Order>
+        <Visible>false</Visible>
+        <Name>Loading...</Name>
+        <GroupQuestions />
+      </QuestionGroup>
+    </QuestionGroups>
+    <Headers />
+    <SurveyScoringLevels />
+    <Tags />
+  </SurveyTemplate>
+  <SurveyTemplate>
+    <IsEditable>false</IsEditable>
+    <Id>2669</Id>
+    <Key>T28</Key>
+    <Name>PHQ9 Depression Screening</Name>
+    <Description>v3</Description>
+    <Version>1.0.6745.31235</Version>
+    <CreatedDate>2018-06-20T17:22:30</CreatedDate>
+    <CreatedBy>SYSTEM</CreatedBy>
+    <PostponeSurveyAction>NO_ACTION</PostponeSurveyAction>
+    <TakenSurveyAction>Depression_Screening_Task,Depression_DepressionScreeningDate_scrd,Depression_Referral_Task,DepressionScreeningResult_Scrd,MESSAGE_ONLY_General_Annual_HRA_Task,MESSAGE_ONLY_General_Initial_HRA_Task,PatientAssessment_IPEFullAssessmentDue_Task</TakenSurveyAction>
+    <IsScorable>true</IsScorable>
+    <BusinessVersion>1.0.0.0</BusinessVersion>
+    <MessageOnlyActions>false</MessageOnlyActions>
+    <ScorecardType>DEPRESSIONSURVEY,DEPRESSIONSURVEYRESULT</ScorecardType>
+    <QuestionGroups>
+      <QuestionGroup>
+        <Order>0</Order>
+        <Visible>false</Visible>
+        <Name>Loading...</Name>
+        <GroupQuestions />
+      </QuestionGroup>
+    </QuestionGroups>
+    <Headers />
+    <SurveyScoringLevels />
+    <Tags />
+  </SurveyTemplate>
+  <SurveyTemplate>
+    <IsEditable>false</IsEditable>
+    <Id>2670</Id>
+    <Key>T22</Key>
+    <Name>Pain Assessment Screening</Name>
+    <Version>1.0.6745.31235</Version>
+    <CreatedDate>2018-06-20T17:22:30</CreatedDate>
+    <CreatedBy>SYSTEM</CreatedBy>
+    <PostponeSurveyAction>NO_ACTION</PostponeSurveyAction>
+    <TakenSurveyAction>Pain_painscreen_scrd</TakenSurveyAction>
+    <IsScorable>true</IsScorable>
+    <BusinessVersion>1.0.0.0</BusinessVersion>
+    <MessageOnlyActions>false</MessageOnlyActions>
+    <ScorecardType>PAINSEVERITY</ScorecardType>
+    <QuestionGroups>
+      <QuestionGroup>
+        <Order>0</Order>
+        <Visible>false</Visible>
+        <Name>Loading...</Name>
+        <GroupQuestions />
+      </QuestionGroup>
+    </QuestionGroups>
+    <Headers />
+    <SurveyScoringLevels />
+    <Tags />
+  </SurveyTemplate>
+  <SurveyTemplate>
+    <IsEditable>false</IsEditable>
+    <Id>2671</Id>
+    <Key>T26</Key>
+    <Name>Patient Assessment - Baseline</Name>
+    <Version>1.0.6745.31235</Version>
+    <CreatedDate>2018-06-20T17:22:30</CreatedDate>
+    <CreatedBy>SYSTEM</CreatedBy>
+    <PostponeSurveyAction>NO_ACTION</PostponeSurveyAction>
+    <TakenSurveyAction>Smoking_ChewingTobaccoUse_scrd,Smoking_Smokingtobaccouse_scrd,Annual_Baseline_Assessment_Task,Diabetic_RetinalExamDue_SCRD,MESSAGE_ONLY_General_Annual_HRA_Task,MESSAGE_ONLY_General_Initial_HRA_Task,TXOPTIONS_TXOptionsDiscussed_scrd_v1,PatientAssessment_MinIPEDataDue_Task</TakenSurveyAction>
+    <IsScorable>false</IsScorable>
+    <BusinessVersion>1.0.0.0</BusinessVersion>
+    <MessageOnlyActions>false</MessageOnlyActions>
+    <ScorecardType>SMOKER</ScorecardType>
+    <QuestionGroups>
+      <QuestionGroup>
+        <Order>0</Order>
+        <Visible>false</Visible>
+        <Name>Loading...</Name>
+        <GroupQuestions />
+      </QuestionGroup>
+    </QuestionGroups>
+    <Headers />
+    <SurveyScoringLevels />
+    <Tags />
+  </SurveyTemplate>
+  <SurveyTemplate>
+    <IsEditable>false</IsEditable>
+    <Id>2672</Id>
+    <Key>T34</Key>
+    <Name>Post Discharge Pathway</Name>
+    <Version>1.0.6745.31235</Version>
+    <CreatedDate>2018-06-20T17:22:30</CreatedDate>
+    <CreatedBy>SYSTEM</CreatedBy>
+    <PostponeSurveyAction>NO_ACTION</PostponeSurveyAction>
+    <TakenSurveyAction>Hospital_PDFContacts_Tasks</TakenSurveyAction>
+    <IsScorable>false</IsScorable>
+    <BusinessVersion>1.0.0.0</BusinessVersion>
+    <MessageOnlyActions>true</MessageOnlyActions>
+    <QuestionGroups>
+      <QuestionGroup>
+        <Order>0</Order>
+        <Visible>false</Visible>
+        <Name>Loading...</Name>
+        <GroupQuestions />
+      </QuestionGroup>
+    </QuestionGroups>
+    <Headers />
+    <SurveyScoringLevels />
+    <Tags />
+  </SurveyTemplate>
+  <SurveyTemplate>
+    <IsEditable>false</IsEditable>
+    <Id>2673</Id>
+    <Key>T18</Key>
+    <Name>Smoking Cessation</Name>
+    <Version>1.0.6745.31235</Version>
+    <CreatedDate>2018-06-20T17:22:30</CreatedDate>
+    <CreatedBy>SYSTEM</CreatedBy>
+    <PostponeSurveyAction>NO_ACTION</PostponeSurveyAction>
+    <TakenSurveyAction>NO_ACTION</TakenSurveyAction>
+    <IsScorable>false</IsScorable>
+    <BusinessVersion>1.0.0.0</BusinessVersion>
+    <MessageOnlyActions>false</MessageOnlyActions>
+    <QuestionGroups>
+      <QuestionGroup>
+        <Order>0</Order>
+        <Visible>false</Visible>
+        <Name>Loading...</Name>
+        <GroupQuestions />
+      </QuestionGroup>
+    </QuestionGroups>
+    <Headers />
+    <SurveyScoringLevels />
+    <Tags />
+  </SurveyTemplate>
+  <SurveyTemplate>
+    <IsEditable>false</IsEditable>
+    <Id>2674</Id>
+    <Key>T31</Key>
+    <Name>Transplant Pathway</Name>
+    <Version>1.0.6745.31235</Version>
+    <CreatedDate>2018-06-20T17:22:30</CreatedDate>
+    <CreatedBy>SYSTEM</CreatedBy>
+    <PostponeSurveyAction>NO_ACTION</PostponeSurveyAction>
+    <TakenSurveyAction>TRANSPLANT_TransplantStatus_scrd_v1,Transplant_Pathway_scrd</TakenSurveyAction>
+    <IsScorable>false</IsScorable>
+    <BusinessVersion>1.0.0.0</BusinessVersion>
+    <MessageOnlyActions>false</MessageOnlyActions>
+    <ScorecardType>TRANSPLANT</ScorecardType>
+    <QuestionGroups>
+      <QuestionGroup>
+        <Order>0</Order>
+        <Visible>false</Visible>
+        <Name>Loading...</Name>
+        <GroupQuestions />
+      </QuestionGroup>
+    </QuestionGroups>
+    <Headers />
+    <SurveyScoringLevels />
+    <Tags />
+  </SurveyTemplate>
+  <SurveyTemplate>
+    <IsEditable>true</IsEditable>
+    <Id>2683</Id>
+    <Key>T50</Key>
+    <Name>SudheerTestingTemplate</Name>
+    <Description />
+    <Version>1.0.6745.31235</Version>
+    <CreatedDate>2018-06-28T10:40:50.032391-05:00</CreatedDate>
+    <CreatedBy>SUBALIVADA</CreatedBy>
+    <PostponeSurveyAction>NO_ACTION</PostponeSurveyAction>
+    <TakenSurveyAction>NO_ACTION</TakenSurveyAction>
+    <IsScorable>false</IsScorable>
+    <BusinessVersion>1.0.6753.15625</BusinessVersion>
+    <MessageOnlyActions>false</MessageOnlyActions>
+    <QuestionGroups>
+      <QuestionGroup>
+        <Key>G1</Key>
+        <Order>0</Order>
+        <Visible>true</Visible>
+        <Name>New Group</Name>
+        <GroupQuestions>
+          <Question>
+            <QuestionType>TEXT</QuestionType>
+            <Id>0</Id>
+            <Key>G1Q1</Key>
+            <Order>0</Order>
+            <Visible>true</Visible>
+            <Text>Sample Question1</Text>
+            <Required>true</Required>
+            <FFImageId xsi:nil="true" />
+            <PostTextVisible>false</PostTextVisible>
+            <IsReportable>true</IsReportable>
+            <QuestionParts />
+          </Question>
+          <Question>
+            <QuestionType>SINGLECHOICE</QuestionType>
+            <Id>0</Id>
+            <Key>G1Q2</Key>
+            <Order>1</Order>
+            <Visible>true</Visible>
+            <Text>Sample Question2</Text>
+            <Required>true</Required>
+            <FFImageId xsi:nil="true" />
+            <PostTextVisible>false</PostTextVisible>
+            <IsReportable>true</IsReportable>
+            <QuestionParts>
+              <QuestionPart>
+                <Id>0</Id>
+                <Key>G1Q2O1</Key>
+                <Order>0</Order>
+                <Visible>true</Visible>
+                <Text>Yes</Text>
+                <Score xsi:nil="true" />
+                <HasCustomText>false</HasCustomText>
+              </QuestionPart>
+              <QuestionPart>
+                <Id>0</Id>
+                <Key>G1Q2O2</Key>
+                <Order>1</Order>
+                <Visible>true</Visible>
+                <Text>No</Text>
+                <Score xsi:nil="true" />
+                <HasCustomText>false</HasCustomText>
+              </QuestionPart>
+            </QuestionParts>
+          </Question>
+        </GroupQuestions>
+      </QuestionGroup>
+    </QuestionGroups>
+    <Headers>
+      <Header>
+        <Id>0</Id>
+        <Name>H1</Name>
+        <Value>Header1</Value>
+        <IsLink>false</IsLink>
+      </Header>
+    </Headers>
+    <SurveyScoringLevels />
+    <Tags />
+  </SurveyTemplate>
+</ArrayOfSurveyTemplate><?xml version="1.0" encoding="utf-16"?>
+<ArrayOfSurveyGrouping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SurveyGrouping>
+    <IsEditable>true</IsEditable>
+    <Id>401</Id>
+    <Name>Health Risk Assessment</Name>
+    <Version>1.0.6745.31235</Version>
+    <CreatedDate>2018-06-20T17:25:53</CreatedDate>
+    <CreatedBy>SYSTEM</CreatedBy>
+    <Key>G1</Key>
+    <SurveyGroupingTemplates>
+      <SurveyGroupingTemplate>
+        <Id>401</Id>
+        <SurveyTemplateKey>T13</SurveyTemplateKey>
+        <SurveyTemplateName>Cognitive Screening - SNP</SurveyTemplateName>
+        <TakenSurveyTemplates />
+      </SurveyGroupingTemplate>
+      <SurveyGroupingTemplate>
+        <Id>402</Id>
+        <SurveyTemplateKey>T15</SurveyTemplateKey>
+        <SurveyTemplateName>Comorbid Review</SurveyTemplateName>
+        <TakenSurveyTemplates />
+      </SurveyGroupingTemplate>
+      <SurveyGroupingTemplate>
+        <Id>403</Id>
+        <SurveyTemplateKey>T17</SurveyTemplateKey>
+        <SurveyTemplateName>ADL Screening</SurveyTemplateName>
+        <TakenSurveyTemplates />
+      </SurveyGroupingTemplate>
+      <SurveyGroupingTemplate>
+        <Id>404</Id>
+        <SurveyTemplateKey>T26</SurveyTemplateKey>
+        <SurveyTemplateName>Patient Assessment - Baseline</SurveyTemplateName>
+        <TakenSurveyTemplates />
+      </SurveyGroupingTemplate>
+      <SurveyGroupingTemplate>
+        <Id>405</Id>
+        <SurveyTemplateKey>T28</SurveyTemplateKey>
+        <SurveyTemplateName>PHQ9 Depression Screening</SurveyTemplateName>
+        <TakenSurveyTemplates />
+      </SurveyGroupingTemplate>
+    </SurveyGroupingTemplates>
+  </SurveyGrouping>
+  <SurveyGrouping>
+    <IsEditable>true</IsEditable>
+    <Id>402</Id>
+    <Name>Transition of Care</Name>
+    <Version>1.0.6745.31235</Version>
+    <CreatedDate>2018-06-20T17:25:53</CreatedDate>
+    <CreatedBy>SYSTEM</CreatedBy>
+    <Key>G4</Key>
+    <SurveyGroupingTemplates>
+      <SurveyGroupingTemplate>
+        <Id>406</Id>
+        <SurveyTemplateKey>T14</SurveyTemplateKey>
+        <SurveyTemplateName>Home Safety Screening</SurveyTemplateName>
+        <TakenSurveyTemplates />
+      </SurveyGroupingTemplate>
+      <SurveyGroupingTemplate>
+        <Id>407</Id>
+        <SurveyTemplateKey>T16</SurveyTemplateKey>
+        <SurveyTemplateName>Fall Risk Assessment</SurveyTemplateName>
+        <TakenSurveyTemplates />
+      </SurveyGroupingTemplate>
+      <SurveyGroupingTemplate>
+        <Id>408</Id>
+        <SurveyTemplateKey>T17</SurveyTemplateKey>
+        <SurveyTemplateName>ADL Screening</SurveyTemplateName>
+        <TakenSurveyTemplates />
+      </SurveyGroupingTemplate>
+      <SurveyGroupingTemplate>
+        <Id>409</Id>
+        <SurveyTemplateKey>T20</SurveyTemplateKey>
+        <SurveyTemplateName>Fall Risk Assessment - ESCO</SurveyTemplateName>
+        <TakenSurveyTemplates />
+      </SurveyGroupingTemplate>
+      <SurveyGroupingTemplate>
+        <Id>410</Id>
+        <SurveyTemplateKey>T21</SurveyTemplateKey>
+        <SurveyTemplateName>Medication Review</SurveyTemplateName>
+        <TakenSurveyTemplates />
+      </SurveyGroupingTemplate>
+      <SurveyGroupingTemplate>
+        <Id>411</Id>
+        <SurveyTemplateKey>T22</SurveyTemplateKey>
+        <SurveyTemplateName>Pain Assessment Screening</SurveyTemplateName>
+        <TakenSurveyTemplates />
+      </SurveyGroupingTemplate>
+      <SurveyGroupingTemplate>
+        <Id>412</Id>
+        <SurveyTemplateKey>T33</SurveyTemplateKey>
+        <SurveyTemplateName>Infection Pathway</SurveyTemplateName>
+        <TakenSurveyTemplates />
+      </SurveyGroupingTemplate>
+      <SurveyGroupingTemplate>
+        <Id>413</Id>
+        <SurveyTemplateKey>T34</SurveyTemplateKey>
+        <SurveyTemplateName>Post Discharge Pathway</SurveyTemplateName>
+        <TakenSurveyTemplates />
+      </SurveyGroupingTemplate>
+    </SurveyGroupingTemplates>
+  </SurveyGrouping>
+</ArrayOfSurveyGrouping><?xml version="1.0" encoding="utf-16"?>
+<ArrayOfRuleSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <RuleSet>
+    <IsEditable>true</IsEditable>
+    <Id>2361</Id>
+    <Key>RS100</Key>
+    <Name>Infection G1Q1</Name>
+    <CreatedDate xsi:nil="true" />
+    <Rules />
+    <RuleSetUsers />
+  </RuleSet>
+  <RuleSet>
+    <IsEditable>true</IsEditable>
+    <Id>2362</Id>
+    <Key>RS104</Key>
+    <Name>Nutrition G1Q2O1 show Questions G1Q6 0r G1Q7</Name>
+    <CreatedDate xsi:nil="true" />
+    <Rules />
+    <RuleSetUsers />
+  </RuleSet>
+  <RuleSet>
+    <IsEditable>true</IsEditable>
+    <Id>2363</Id>
+    <Key>RS108</Key>
+    <Name>ACP Q4</Name>
+    <CreatedDate xsi:nil="true" />
+    <Rules />
+    <RuleSetUsers />
+  </RuleSet>
+  <RuleSet>
+    <IsEditable>true</IsEditable>
+    <Id>2364</Id>
+    <Key>RS109</Key>
+    <Name>Transplant Q1</Name>
+    <CreatedDate xsi:nil="true" />
+    <Rules />
+    <RuleSetUsers />
+  </RuleSet>
+  <RuleSet>
+    <IsEditable>true</IsEditable>
+    <Id>2365</Id>
+    <Key>RS110</Key>
+    <Name>Transplant Q2</Name>
+    <CreatedDate xsi:nil="true" />
+    <Rules />
+    <RuleSetUsers />
+  </RuleSet>
+  <RuleSet>
+    <IsEditable>true</IsEditable>
+    <Id>2366</Id>
+    <Key>RS111</Key>
+    <Name>Transplant Q4</Name>
+    <CreatedDate xsi:nil="true" />
+    <Rules />
+    <RuleSetUsers />
+  </RuleSet>
+  <RuleSet>
+    <IsEditable>true</IsEditable>
+    <Id>2367</Id>
+    <Key>RS112</Key>
+    <Name>EscoFallRisk G1Q1</Name>
+    <CreatedDate xsi:nil="true" />
+    <Rules />
+    <RuleSetUsers />
+  </RuleSet>
+  <RuleSet>
+    <IsEditable>true</IsEditable>
+    <Id>2368</Id>
+    <Key>RS113</Key>
+    <Name>CHF Fluid HTN G1Q2</Name>
+    <CreatedDate xsi:nil="true" />
+    <Rules />
+    <RuleSetUsers />
+  </RuleSet>
+  <RuleSet>
+    <IsEditable>true</IsEditable>
+    <Id>2369</Id>
+    <Key>RS114</Key>
+    <Name>CHF Fluid HTN G1Q10</Name>
+    <CreatedDate xsi:nil="true" />
+    <Rules />
+    <RuleSetUsers />
+  </RuleSet>
+  <RuleSet>
+    <IsEditable>true</IsEditable>
+    <Id>2370</Id>
+    <Key>RS115</Key>
+    <Name>Tx Options ESRD G1Q1</Name>
+    <CreatedDate xsi:nil="true" />
+    <Rules />
+    <RuleSetUsers />
+  </RuleSet>
+  <RuleSet>
+    <IsEditable>true</IsEditable>
+    <Id>2371</Id>
+    <Key>RS116</Key>
+    <Name>Tx Options ESRD G1Q3</Name>
+    <CreatedDate xsi:nil="true" />
+    <Rules />
+    <RuleSetUsers />
+  </RuleSet>
+  <RuleSet>
+    <IsEditable>true</IsEditable>
+    <Id>2372</Id>
+    <Key>RS117</Key>
+    <Name>Tx Options ESRD G1Q6</Name>
+    <CreatedDate xsi:nil="true" />
+    <Rules />
+    <RuleSetUsers />
+  </RuleSet>
+  <RuleSet>
+    <IsEditable>true</IsEditable>
+    <Id>2373</Id>
+    <Key>RS118</Key>
+    <Name>Tx Options ESRD G1Q9</Name>
+    <CreatedDate xsi:nil="true" />
+    <Rules />
+    <RuleSetUsers />
+  </RuleSet>
+  <RuleSet>
+    <IsEditable>true</IsEditable>
+    <Id>2374</Id>
+    <Key>RS119</Key>
+    <Name>Tx Options ESRD G1Q5</Name>
+    <CreatedDate xsi:nil="true" />
+    <Rules />
+    <RuleSetUsers />
+  </RuleSet>
+  <RuleSet>
+    <IsEditable>true</IsEditable>
+    <Id>2375</Id>
+    <Key>RS120</Key>
+    <Name>CHF Fluid Q5 Post Text</Name>
+    <CreatedDate xsi:nil="true" />
+    <Rules />
+    <RuleSetUsers />
+  </RuleSet>
+  <RuleSet>
+    <IsEditable>true</IsEditable>
+    <Id>2376</Id>
+    <Key>RS121</Key>
+    <Name>Infection G1Q2</Name>
+    <CreatedDate xsi:nil="true" />
+    <Rules />
+    <RuleSetUsers />
+  </RuleSet>
+  <RuleSet>
+    <IsEditable>true</IsEditable>
+    <Id>2377</Id>
+    <Key>RS122</Key>
+    <Name>Infection G1Q3</Name>
+    <CreatedDate xsi:nil="true" />
+    <Rules />
+    <RuleSetUsers />
+  </RuleSet>
+  <RuleSet>
+    <IsEditable>true</IsEditable>
+    <Id>2378</Id>
+    <Key>RS123</Key>
+    <Name>Infection G1Q4</Name>
+    <CreatedDate xsi:nil="true" />
+    <Rules />
+    <RuleSetUsers />
+  </RuleSet>
+  <RuleSet>
+    <IsEditable>true</IsEditable>
+    <Id>2379</Id>
+    <Key>RS124</Key>
+    <Name>Infection G1Q7</Name>
+    <CreatedDate xsi:nil="true" />
+    <Rules />
+    <RuleSetUsers />
+  </RuleSet>
+  <RuleSet>
+    <IsEditable>true</IsEditable>
+    <Id>2380</Id>
+    <Key>RS125</Key>
+    <Name>Infection G1Q9</Name>
+    <CreatedDate xsi:nil="true" />
+    <Rules />
+    <RuleSetUsers />
+  </RuleSet>
+  <RuleSet>
+    <IsEditable>true</IsEditable>
+    <Id>2381</Id>
+    <Key>RS126</Key>
+    <Name>Post Discharge Q11 Post Text</Name>
+    <CreatedDate xsi:nil="true" />
+    <Rules />
+    <RuleSetUsers />
+  </RuleSet>
+  <RuleSet>
+    <IsEditable>true</IsEditable>
+    <Id>2382</Id>
+    <Key>RS129</Key>
+    <Name>ESCO Fall G1Q3 Clear O1 to 3</Name>
+    <CreatedDate xsi:nil="true" />
+    <Rules />
+    <RuleSetUsers />
+  </RuleSet>
+  <RuleSet>
+    <IsEditable>true</IsEditable>
+    <Id>2383</Id>
+    <Key>RS130</Key>
+    <Name>ESCO Fall G1Q6 Clear O1 to 3</Name>
+    <CreatedDate xsi:nil="true" />
+    <Rules />
+    <RuleSetUsers />
+  </RuleSet>
+  <RuleSet>
+    <IsEditable>true</IsEditable>
+    <Id>2384</Id>
+    <Key>RS131</Key>
+    <Name>ESCO Fall G1Q7 Clear O1 to 3</Name>
+    <CreatedDate xsi:nil="true" />
+    <Rules />
+    <RuleSetUsers />
+  </RuleSet>
+  <RuleSet>
+    <IsEditable>true</IsEditable>
+    <Id>2385</Id>
+    <Key>RS132</Key>
+    <Name>ESCO Fall G1Q8 Clear O1 to 9</Name>
+    <CreatedDate xsi:nil="true" />
+    <Rules />
+    <RuleSetUsers />
+  </RuleSet>
+  <RuleSet>
+    <IsEditable>true</IsEditable>
+    <Id>2386</Id>
+    <Key>RS134</Key>
+    <Name>NP E Comp G12Q26 Show Options as Sequence</Name>
+    <CreatedDate xsi:nil="true" />
+    <Rules />
+    <RuleSetUsers />
+  </RuleSet>
+  <RuleSet>
+    <IsEditable>true</IsEditable>
+    <Id>2387</Id>
+    <Key>RS135</Key>
+    <Name>NP E Comp G6Q34 Show Options as Sequence</Name>
+    <CreatedDate xsi:nil="true" />
+    <Rules />
+    <RuleSetUsers />
+  </RuleSet>
+  <RuleSet>
+    <IsEditable>true</IsEditable>
+    <Id>2388</Id>
+    <Key>RS136</Key>
+    <Name>NP E Comp G1Q6 Show Options as Sequence</Name>
+    <CreatedDate xsi:nil="true" />
+    <Rules />
+    <RuleSetUsers />
+  </RuleSet>
+  <RuleSet>
+    <IsEditable>true</IsEditable>
+    <Id>2389</Id>
+    <Key>RS137</Key>
+    <Name>NP E Comp G10Q4 Show Options as Sequence</Name>
+    <CreatedDate xsi:nil="true" />
+    <Rules />
+    <RuleSetUsers />
+  </RuleSet>
+  <RuleSet>
+    <IsEditable>true</IsEditable>
+    <Id>2390</Id>
+    <Key>RS138</Key>
+    <Name>NP E Comp G7Q17 Show Options as Sequence</Name>
+    <CreatedDate xsi:nil="true" />
+    <Rules />
+    <RuleSetUsers />
+  </RuleSet>
+  <RuleSet>
+    <IsEditable>true</IsEditable>
+    <Id>2391</Id>
+    <Key>RS139</Key>
+    <Name>NP E Prog G1Q5 Show Options as Sequence</Name>
+    <CreatedDate xsi:nil="true" />
+    <Rules />
+    <RuleSetUsers />
+  </RuleSet>
+  <RuleSet>
+    <IsEditable>true</IsEditable>
+    <Id>2392</Id>
+    <Key>RS140</Key>
+    <Name>NP E Prog G1Q6 Show Options as Sequence</Name>
+    <CreatedDate xsi:nil="true" />
+    <Rules />
+    <RuleSetUsers />
+  </RuleSet>
+  <RuleSet>
+    <IsEditable>true</IsEditable>
+    <Id>2393</Id>
+    <Key>RS141</Key>
+    <Name>NP E Prog G1Q7 Show Options as Sequence</Name>
+    <CreatedDate xsi:nil="true" />
+    <Rules />
+    <RuleSetUsers />
+  </RuleSet>
+  <RuleSet>
+    <IsEditable>true</IsEditable>
+    <Id>2394</Id>
+    <Key>RS142</Key>
+    <Name>NP E Post Disch G1Q1 Show Options as Sequence</Name>
+    <CreatedDate xsi:nil="true" />
+    <Rules />
+    <RuleSetUsers />
+  </RuleSet>
+  <RuleSet>
+    <IsEditable>true</IsEditable>
+    <Id>2395</Id>
+    <Key>RS157</Key>
+    <Name>NP E Post Disch G1Q2 Show Options as Sequence</Name>
+    <CreatedDate xsi:nil="true" />
+    <Rules />
+    <RuleSetUsers />
+  </RuleSet>
+  <RuleSet>
+    <IsEditable>true</IsEditable>
+    <Id>2396</Id>
+    <Key>RS158</Key>
+    <Name>NP E Post Disch G1Q3 Show Options as Sequence</Name>
+    <CreatedDate xsi:nil="true" />
+    <Rules />
+    <RuleSetUsers />
+  </RuleSet>
+  <RuleSet>
+    <IsEditable>true</IsEditable>
+    <Id>2397</Id>
+    <Key>RS159</Key>
+    <Name>NP E Post Disch G1Q4 Show Options as Sequence</Name>
+    <CreatedDate xsi:nil="true" />
+    <Rules />
+    <RuleSetUsers />
+  </RuleSet>
+  <RuleSet>
+    <IsEditable>true</IsEditable>
+    <Id>2398</Id>
+    <Key>RS160</Key>
+    <Name>BDI ESCO G1Q1O1 Show G1Q2</Name>
+    <CreatedDate xsi:nil="true" />
+    <Rules />
+    <RuleSetUsers />
+  </RuleSet>
+  <RuleSet>
+    <IsEditable>true</IsEditable>
+    <Id>2399</Id>
+    <Key>RS161</Key>
+    <Name>NP Comp G5Q1</Name>
+    <CreatedDate xsi:nil="true" />
+    <Rules />
+    <RuleSetUsers />
+  </RuleSet>
+  <RuleSet>
+    <IsEditable>true</IsEditable>
+    <Id>2400</Id>
+    <Key>RS162</Key>
+    <Name>NP Comp G5Q3</Name>
+    <CreatedDate xsi:nil="true" />
+    <Rules />
+    <RuleSetUsers />
+  </RuleSet>
+  <RuleSet>
+    <IsEditable>true</IsEditable>
+    <Id>2401</Id>
+    <Key>RS163</Key>
+    <Name>ACP G1Q2 Post Text</Name>
+    <CreatedDate xsi:nil="true" />
+    <Rules />
+    <RuleSetUsers />
+  </RuleSet>
+  <RuleSet>
+    <IsEditable>true</IsEditable>
+    <Id>2402</Id>
+    <Key>RS164</Key>
+    <Name>ACP Q3 Post Text</Name>
+    <CreatedDate xsi:nil="true" />
+    <Rules />
+    <RuleSetUsers />
+  </RuleSet>
+  <RuleSet>
+    <IsEditable>true</IsEditable>
+    <Id>2403</Id>
+    <Key>RS165</Key>
+    <Name>NP Comp G5Q5</Name>
+    <CreatedDate xsi:nil="true" />
+    <Rules />
+    <RuleSetUsers />
+  </RuleSet>
+  <RuleSet>
+    <IsEditable>true</IsEditable>
+    <Id>2404</Id>
+    <Key>RS166</Key>
+    <Name>NP Comp G5Q7</Name>
+    <CreatedDate xsi:nil="true" />
+    <Rules />
+    <RuleSetUsers />
+  </RuleSet>
+  <RuleSet>
+    <IsEditable>true</IsEditable>
+    <Id>2405</Id>
+    <Key>RS167</Key>
+    <Name>ACP Q8</Name>
+    <CreatedDate xsi:nil="true" />
+    <Rules />
+    <RuleSetUsers />
+  </RuleSet>
+  <RuleSet>
+    <IsEditable>true</IsEditable>
+    <Id>2406</Id>
+    <Key>RS168</Key>
+    <Name>NP Comp G5Q9</Name>
+    <CreatedDate xsi:nil="true" />
+    <Rules />
+    <RuleSetUsers />
+  </RuleSet>
+  <RuleSet>
+    <IsEditable>true</IsEditable>
+    <Id>2407</Id>
+    <Key>RS169</Key>
+    <Name>BDI ESCO G1Q2 Hide Proceeding Questions</Name>
+    <CreatedDate xsi:nil="true" />
+    <Rules />
+    <RuleSetUsers />
+  </RuleSet>
+  <RuleSet>
+    <IsEditable>true</IsEditable>
+    <Id>2408</Id>
+    <Key>RS170</Key>
+    <Name>Diab Foot Q1</Name>
+    <CreatedDate xsi:nil="true" />
+    <Rules />
+    <RuleSetUsers />
+  </RuleSet>
+  <RuleSet>
+    <IsEditable>true</IsEditable>
+    <Id>2409</Id>
+    <Key>RS171</Key>
+    <Name>Diab Foot Q5</Name>
+    <CreatedDate xsi:nil="true" />
+    <Rules />
+    <RuleSetUsers />
+  </RuleSet>
+  <RuleSet>
+    <IsEditable>true</IsEditable>
+    <Id>2410</Id>
+    <Key>RS172</Key>
+    <Name>Diab Foot Q9</Name>
+    <CreatedDate xsi:nil="true" />
+    <Rules />
+    <RuleSetUsers />
+  </RuleSet>
+  <RuleSet>
+    <IsEditable>true</IsEditable>
+    <Id>2411</Id>
+    <Key>RS173</Key>
+    <Name>Pain G1Q3</Name>
+    <CreatedDate xsi:nil="true" />
+    <Rules />
+    <RuleSetUsers />
+  </RuleSet>
+  <RuleSet>
+    <IsEditable>true</IsEditable>
+    <Id>2412</Id>
+    <Key>RS174</Key>
+    <Name>Diab Blood Sugar Q1 Post Text</Name>
+    <CreatedDate xsi:nil="true" />
+    <Rules />
+    <RuleSetUsers />
+  </RuleSet>
+  <RuleSet>
+    <IsEditable>true</IsEditable>
+    <Id>2413</Id>
+    <Key>RS176</Key>
+    <Name>Med Review Q7 Post Text</Name>
+    <CreatedDate xsi:nil="true" />
+    <Rules />
+    <RuleSetUsers />
+  </RuleSet>
+  <RuleSet>
+    <IsEditable>true</IsEditable>
+    <Id>2414</Id>
+    <Key>RS177</Key>
+    <Name>Med Review Q8 Post Text</Name>
+    <CreatedDate xsi:nil="true" />
+    <Rules />
+    <RuleSetUsers />
+  </RuleSet>
+  <RuleSet>
+    <IsEditable>true</IsEditable>
+    <Id>2415</Id>
+    <Key>RS178</Key>
+    <Name>Transplant Q7 Skip Logic</Name>
+    <CreatedDate xsi:nil="true" />
+    <Rules />
+    <RuleSetUsers />
+  </RuleSet>
+  <RuleSet>
+    <IsEditable>true</IsEditable>
+    <Id>2416</Id>
+    <Key>RS179</Key>
+    <Name>Pain G1Q1O3 Hide Proceeding Questions</Name>
+    <CreatedDate xsi:nil="true" />
+    <Rules />
+    <RuleSetUsers />
+  </RuleSet>
+  <RuleSet>
+    <IsEditable>true</IsEditable>
+    <Id>2417</Id>
+    <Key>RS180</Key>
+    <Name>Nutrition G1Q1 show G1Q4 and G1Q11</Name>
+    <CreatedDate xsi:nil="true" />
+    <Rules />
+    <RuleSetUsers />
+  </RuleSet>
+  <RuleSet>
+    <IsEditable>true</IsEditable>
+    <Id>2418</Id>
+    <Key>RS77</Key>
+    <Name>NP Foot G7Q1O4 Show G7Q2 and Hide G8 and 10</Name>
+    <CreatedDate xsi:nil="true" />
+    <Rules />
+    <RuleSetUsers />
+  </RuleSet>
+  <RuleSet>
+    <IsEditable>true</IsEditable>
+    <Id>2419</Id>
+    <Key>RS78</Key>
+    <Name>NP Foot G7Q3O4 Show G7Q4 and Hide G 9 and 11</Name>
+    <CreatedDate xsi:nil="true" />
+    <Rules />
+    <RuleSetUsers />
+  </RuleSet>
+  <RuleSet>
+    <IsEditable>true</IsEditable>
+    <Id>2420</Id>
+    <Key>RS84</Key>
+    <Name>VHN Med Review Type Rule G1Q1</Name>
+    <CreatedDate xsi:nil="true" />
+    <Rules />
+    <RuleSetUsers />
+  </RuleSet>
+  <RuleSet>
+    <IsEditable>true</IsEditable>
+    <Id>2421</Id>
+    <Key>RS85</Key>
+    <Name>PHQ9 Q3</Name>
+    <CreatedDate xsi:nil="true" />
+    <Rules />
+    <RuleSetUsers />
+  </RuleSet>
+  <RuleSet>
+    <IsEditable>true</IsEditable>
+    <Id>2422</Id>
+    <Key>RS87</Key>
+    <Name>NP Foot G3Q1O6 Show clear O1 to 5</Name>
+    <CreatedDate xsi:nil="true" />
+    <Rules />
+    <RuleSetUsers />
+  </RuleSet>
+  <RuleSet>
+    <IsEditable>true</IsEditable>
+    <Id>2423</Id>
+    <Key>RS88</Key>
+    <Name>Diab Foot G1Q3O1 Show Post Text</Name>
+    <CreatedDate xsi:nil="true" />
+    <Rules />
+    <RuleSetUsers />
+  </RuleSet>
+  <RuleSet>
+    <IsEditable>true</IsEditable>
+    <Id>2424</Id>
+    <Key>RS90</Key>
+    <Name>Diab Foot G1Q7O1 Show Post Text</Name>
+    <CreatedDate xsi:nil="true" />
+    <Rules />
+    <RuleSetUsers />
+  </RuleSet>
+  <RuleSet>
+    <IsEditable>true</IsEditable>
+    <Id>2425</Id>
+    <Key>RS92</Key>
+    <Name>Diab Foot G1Q9 skip logic and post text</Name>
+    <CreatedDate xsi:nil="true" />
+    <Rules />
+    <RuleSetUsers />
+  </RuleSet>
+  <RuleSet>
+    <IsEditable>true</IsEditable>
+    <Id>2426</Id>
+    <Key>RS93</Key>
+    <Name>Diab Blood Sugar G1Q5O1 Show Post Text</Name>
+    <CreatedDate xsi:nil="true" />
+    <Rules />
+    <RuleSetUsers />
+  </RuleSet>
+  <RuleSet>
+    <IsEditable>true</IsEditable>
+    <Id>2427</Id>
+    <Key>RS94</Key>
+    <Name>Diab Blood Sugar G1Q8O1 Show Post Text</Name>
+    <CreatedDate xsi:nil="true" />
+    <Rules />
+    <RuleSetUsers />
+  </RuleSet>
+  <RuleSet>
+    <IsEditable>true</IsEditable>
+    <Id>2428</Id>
+    <Key>RS95</Key>
+    <Name>Diab Blood Sugar G1Q2 skip logic</Name>
+    <CreatedDate xsi:nil="true" />
+    <Rules />
+    <RuleSetUsers />
+  </RuleSet>
+  <RuleSet>
+    <IsEditable>true</IsEditable>
+    <Id>2429</Id>
+    <Key>RS96</Key>
+    <Name>Diab Blood Sugar G1Q6 skip logic</Name>
+    <CreatedDate xsi:nil="true" />
+    <Rules />
+    <RuleSetUsers />
+  </RuleSet>
+  <RuleSet>
+    <IsEditable>true</IsEditable>
+    <Id>2430</Id>
+    <Key>RS97</Key>
+    <Name>Diab Blood Sugar G1Q3 skip logic</Name>
+    <CreatedDate xsi:nil="true" />
+    <Rules />
+    <RuleSetUsers />
+  </RuleSet>
+  <RuleSet>
+    <IsEditable>true</IsEditable>
+    <Id>2431</Id>
+    <Key>RS98</Key>
+    <Name>Post Discharge Q7</Name>
+    <CreatedDate xsi:nil="true" />
+    <Rules />
+    <RuleSetUsers />
+  </RuleSet>
+  <RuleSet>
+    <IsEditable>true</IsEditable>
+    <Id>2432</Id>
+    <Key>RS99</Key>
+    <Name>Nutrition G1Q2O1 show Questions G1Q3 0r G1Q4</Name>
+    <CreatedDate xsi:nil="true" />
+    <Rules />
+    <RuleSetUsers />
+  </RuleSet>
+</ArrayOfRuleSet><?xml version="1.0" encoding="utf-16"?>
+<ArrayOfPayer xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Payer>
+    <Programs>
+      <PatientProgram>
+        <partition_key>partition_key1</partition_key>
+        <created_by>created_by1</created_by>
+        <updated_by>updated_by1</updated_by>
+        <delete_date>2018-06-28T02:00:00-05:00</delete_date>
+        <create_date>2018-06-28T02:00:00-05:00</create_date>
+        <update_date>2018-06-28T02:00:00-05:00</update_date>
+        <timestamp>2018-06-28T02:00:00-05:00</timestamp>
+        <Id>1</Id>
+        <Key>Key1</Key>
+        <Name>Payer Program</Name>
+        <Description>Description1</Description>
+        <Patients />
+        <PrioritizationModels>
+          <PrioritizationModel>
+            <partition_key>partition_key1</partition_key>
+            <created_by>created_by1</created_by>
+            <updated_by>updated_by1</updated_by>
+            <delete_date>2018-06-28T02:00:00-05:00</delete_date>
+            <create_date>2018-06-28T02:00:00-05:00</create_date>
+            <update_date>2018-06-28T02:00:00-05:00</update_date>
+            <timestamp>2018-06-28T02:00:00-05:00</timestamp>
+            <RulesModel>
+              <IsEditable>false</IsEditable>
+              <Id>0</Id>
+              <SerializedMSRuleSet />
+              <CreatedDate xsi:nil="true" />
+              <Rules />
+              <RuleSetUsers />
+            </RulesModel>
+            <Id>1</Id>
+            <Key>Key1</Key>
+            <Name>Model</Name>
+            <Version>Version1</Version>
+            <PatientProgramId>1</PatientProgramId>
+            <ModelOfCareId>1</ModelOfCareId>
+            <ModelOfCare>
+              <partition_key>partition_key1</partition_key>
+              <created_by>created_by1</created_by>
+              <updated_by>updated_by1</updated_by>
+              <delete_date>2018-06-28T02:00:00-05:00</delete_date>
+              <create_date>2018-06-28T02:00:00-05:00</create_date>
+              <update_date>2018-06-28T02:00:00-05:00</update_date>
+              <timestamp>2018-06-28T02:00:00-05:00</timestamp>
+              <Id>1</Id>
+              <Key>Key1</Key>
+              <ACPScreeningIntervalDays>1</ACPScreeningIntervalDays>
+              <ACPScreeningWeight>1</ACPScreeningWeight>
+              <DepressionScreeningIntervalDays>1</DepressionScreeningIntervalDays>
+              <DepressionScreeningWeight>1</DepressionScreeningWeight>
+              <FallScreeningIntervalDays>1</FallScreeningIntervalDays>
+              <FallScreeningWeight>1</FallScreeningWeight>
+              <TabaccoScreeningIntervalDays>1</TabaccoScreeningIntervalDays>
+              <TabaccoScreeningWeight>1</TabaccoScreeningWeight>
+              <CurrentFluShotWeight>1</CurrentFluShotWeight>
+              <CurrentPneumoniaImmunuzationWeight>1</CurrentPneumoniaImmunuzationWeight>
+              <MinFluid>1</MinFluid>
+              <MaxFluid>1</MaxFluid>
+              <FluidScoreWeight>1</FluidScoreWeight>
+            </ModelOfCare>
+          </PrioritizationModel>
+        </PrioritizationModels>
+      </PatientProgram>
+    </Programs>
+    <Id>1</Id>
+    <Name>Payer</Name>
+    <PhoneNumber>PhoneNumber1</PhoneNumber>
+    <Key>Key1</Key>
+    <IsEditable>true</IsEditable>
+  </Payer>
+</ArrayOfPayer>
