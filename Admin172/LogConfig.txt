@@ -1,2 +1,0 @@
-6/28/2018 10:34:53 AM - Attemping configuration discovery of type: EnvVarConfigurationDiscovery
-6/28/2018 10:34:53 AM - Configuration type set to: Stage

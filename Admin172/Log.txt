@@ -1,2 +1,0 @@
-2018-06-28 10:34:54,741 [1] INFO  Common.Configuration [(null)] - Registering configuration: Capella.UI.Configuration.ConfigUI
-2018-06-28 10:34:56,851 [1] INFO  Common.Configuration [(null)] - Solution Configuration: Stage being used, on layer: ConfigUI!
